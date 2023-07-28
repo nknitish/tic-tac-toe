@@ -5,10 +5,15 @@ import React, { useState } from "react";
 import { checkWinner } from "./utilities";
 import Button from "@/components/atoms/button";
 
+type resultType = {
+  msg: string;
+  index: number[];
+};
+
 export default function TicToc() {
   const [block, setBlock] = useState(Array(9).fill(""));
   const [isPlayerX, setIsPlayerX] = useState(true);
-  const [result, setResult] = useState({
+  const [result, setResult] = useState<resultType>({
     msg: "",
     index: [],
   });
@@ -46,7 +51,7 @@ export default function TicToc() {
     setIsPlayerX(true);
   };
 
-  const checkDisable = (index: Number) => {
+  const checkDisable = (index: number) => {
     //Check if Result is announced
 
     if (result.msg) {
