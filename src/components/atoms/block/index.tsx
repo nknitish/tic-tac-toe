@@ -28,7 +28,7 @@ export default function Block({ text, handleClick, disable }: propType) {
       className={`aspect-square flex justify-center items-center shadow-lg shadow-cyan-500/50 rounded-2xl cursor-pointer 
       ${getStyle()} ${getOpacity()} `}
     >
-      <h1 className="font-bold text-7xl">{text}</h1>
+      <h1 className="font-bold text-4xl md:text-7xl lg:text-9xl">{text}</h1>
     </div>
   );
 }

@@ -70,7 +70,7 @@ export default function TicToc() {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <div className="grid grid-cols-3 gap-5 w-1/3">
+      <div className="grid grid-cols-3 gap-5 w-4/5 md:w-3/5 lg:w-2/5">
         {block.map((e, i) => (
           <Block
             key={i}
@@ -80,7 +80,7 @@ export default function TicToc() {
           />
         ))}
       </div>
-      <h1 className="m-10 text-4xl text-center">{result?.msg}</h1>
+      <h1 className="m-10 text-2xl md:text-3xl text-center">{result?.msg}</h1>
       <Button text={"Reset"} handleClick={handleReset} />
     </div>
   );
